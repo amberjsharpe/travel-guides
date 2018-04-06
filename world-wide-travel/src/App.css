@@ -34,9 +34,24 @@ a {
   font-size: large;
 }
 
+.guide-display {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px 100px;
+}
+
 .card {
   border: 1px solid black;
+  margin: 15px;
+}
+
+.card-body {
   width: 175px;
+}
+
+.card-img {
+  width: 318px;
+  height: 180px;
 }
 
 .footer {

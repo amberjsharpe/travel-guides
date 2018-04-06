@@ -11,7 +11,9 @@ class App extends Component {
       <div className="App">
         <Header title="World Wide Travel" />
         <Background />
-        <Guides />
+        <div className="guide-display">
+          <Guides />
+        </div>
         <footer className="footer">
           <Footer url="https://www.gohawaii.com/" destination="Hawaii"/> 
           <Footer url="https://tahititourisme.com/en-us/" destination="Tahiti"/>
