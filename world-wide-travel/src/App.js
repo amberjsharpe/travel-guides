@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
+import Background from './Background';
+import Footer from './Footer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Header title="World Wide Travel" />
+        <Background />
+        <footer className="footer">
+          <Footer url="https://www.gohawaii.com/" destination="Hawaii"/> 
+          <Footer url="https://tahititourisme.com/en-us/" destination="Tahiti"/>
+          <Footer url="http://www.visitjamaica.com/" destination="Jamaica"/>        
+          <Footer url="https://www.aruba.com/" destination="Aruba"/>
+        </footer>
       </div>
     );
   }
