@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import dog from './images/dog.jpg';
 
-function Background(){
+function Background() {
     return (
         <div>
-            <img src={"images/dog.jpeg"} alt="dog on the beach"/>
+            <img src={dog} alt="dog on the beach"/>
         </div>
     )
 }
