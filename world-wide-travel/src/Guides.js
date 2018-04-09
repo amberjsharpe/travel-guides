@@ -9,8 +9,8 @@ function Guides(props){
   console.log(json);
     return (
       <React.Fragment>
-      {json.guides.map(j => {
-        return <div>
+      {json.guides.map((j, i) => {
+        return <div key={i}>
         <Card>
           <CardImg className="card-img" src={tropical} alt="Card image cap" />
           <CardBody>

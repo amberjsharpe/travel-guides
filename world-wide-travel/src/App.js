@@ -4,6 +4,7 @@ import Header from './Header';
 import Background from './Background';
 import Footer from './Footer';
 import Guides from './Guides';
+import Weather from './Weather';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <Background />
         <div className="guide-display">
           <Guides />
+          <Weather />
         </div>
         <footer className="footer">
           <Footer url="https://www.gohawaii.com/" destination="Hawaii"/> 
