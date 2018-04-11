@@ -6,15 +6,21 @@ import Footer from './Footer';
 import Guides from './Guides';
 import Weather from './Weather';
 
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header title="World Wide Travel" />
-        <Background />
-        <div className="guide-display">
-          <Guides />
-          <Weather />
+        <Header title="Travel with Fido" />
+        <div className="body">
+          <Background />
+          <div className="weather-display">
+            <Weather />
+          </div>
+          <h2>Bork! Bork! Need a guide?</h2>
+          <div className="guide-display">
+            <Guides />
+          </div>
         </div>
         <footer className="footer">
           <Footer url="https://www.gohawaii.com/" destination="Hawaii"/> 

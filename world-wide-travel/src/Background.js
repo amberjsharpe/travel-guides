@@ -4,10 +4,9 @@ import dog from './images/dog.jpg';
 
 function Background() {
     return (
-        <div>
-            <img src={dog} alt="dog on the beach"/>
-        </div>
+        <img className="dog-images" src={dog} alt="dog on the beach"/>
     )
 }
 
 export default Background;
+

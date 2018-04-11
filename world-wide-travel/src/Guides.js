@@ -11,7 +11,7 @@ function Guides(props){
       <React.Fragment>
       {json.guides.map((j, i) => {
         return <div key={i}>
-        <Card>
+        <Card className="card">
           <CardImg className="card-img" src={tropical} alt="Card image cap" />
           <CardBody>
             <CardTitle>{j.title}</CardTitle>

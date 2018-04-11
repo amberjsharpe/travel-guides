@@ -34,10 +34,30 @@ a {
   font-size: large;
 }
 
+.body {
+  margin: 125px;
+}
+
+.weather-input {
+  width: 175px;
+  height: 22px;
+  border: solid black 2px;
+}
+
+.temp-render {
+  padding: 25px;
+}
+
+.down-arrow {
+  width: 35px;
+  height: 35px;
+  padding-bottom: 15px;
+}
+
 .guide-display {
   display: flex;
   flex-wrap: wrap;
-  margin: 15px 100px;
+  margin: 15px;
 }
 
 .card {
@@ -45,12 +65,13 @@ a {
   margin: 15px;
 }
 
-.card-body {
-  width: 175px;
+.card {
+  width: 250px;
+  height: 375px;
 }
 
 .card-img {
-  width: 318px;
+  width: 250px;
   height: 180px;
 }
 
