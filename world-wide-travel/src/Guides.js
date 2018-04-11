@@ -15,9 +15,9 @@ function Guides(props){
           <CardImg className="card-img" src={tropical} alt="Card image cap" />
           <CardBody>
             <CardTitle>{j.title}</CardTitle>
-            <CardSubtitle>{j.type}</CardSubtitle>
+            <CardTitle>{j.type}</CardTitle>
             <CardText>{j.price}</CardText>
-            <Button outline color="success">Button</Button>
+            <Button>View</Button>
           </CardBody>
         </Card>
       </div>     

@@ -12,6 +12,12 @@ class App extends Component {
     return (
       <div className="App">
         <Header title="Travel with Fido" />
+        <footer className="footer">
+          <Footer url="https://www.gohawaii.com/" destination="Hawaii"/> 
+          <Footer url="https://tahititourisme.com/en-us/" destination="Tahiti"/>
+          <Footer url="http://www.visitjamaica.com/" destination="Jamaica"/>        
+          <Footer url="https://www.aruba.com/" destination="Aruba"/>
+        </footer>
         <div className="body">
           <Background />
           <div className="weather-display">
@@ -22,12 +28,7 @@ class App extends Component {
             <Guides />
           </div>
         </div>
-        <footer className="footer">
-          <Footer url="https://www.gohawaii.com/" destination="Hawaii"/> 
-          <Footer url="https://tahititourisme.com/en-us/" destination="Tahiti"/>
-          <Footer url="http://www.visitjamaica.com/" destination="Jamaica"/>        
-          <Footer url="https://www.aruba.com/" destination="Aruba"/>
-        </footer>
+
       </div>
     );
   }

@@ -19,6 +19,7 @@ a {
 
 .App-header {
   background-image: url('images/worldtravel.jpg');
+  background-size: 100%;
   font-family: 'Slabo 27px';
   font-size: 40px;
   height: 150px;
@@ -28,6 +29,7 @@ a {
 
 .App-title {
   font-size: 1.5em;
+  margin-right: 400px;
 }
 
 .App-intro {
@@ -35,13 +37,24 @@ a {
 }
 
 .body {
-  margin: 125px;
+  margin: 35px 125px;
+}
+
+.btn {
+  width: 85px;
+  height: 85px;
+  background: #ED6A5E;
+  border: 2px solid #F4442E;
+  border-radius: 100%;
+  font-family: 'Slabo 27px';
+  font-size: 20px;
 }
 
 .weather-input {
   width: 175px;
   height: 22px;
   border: solid black 2px;
+  margin-right: 25px;
 }
 
 .temp-render {
@@ -67,20 +80,21 @@ a {
 
 .card {
   width: 250px;
-  height: 375px;
+  height: 325px;
 }
 
 .card-img {
   width: 250px;
-  height: 180px;
+  height: 80px;
 }
 
 .footer {
   display: flex;
   justify-content: space-around;
   position: relative;
+  background-color: #FC9E4F;
   bottom: 0;
-  height: 100px;
+  height: 65px;
   width: 100%;
 }
 

@@ -50,17 +50,17 @@ class Weather extends Component {
     
     render(props){
         return <div>
-        <h2>Get weather</h2>
+        <h2>Henlo! Get the weather...</h2>
         <img className="down-arrow" src={down} alt="down arrow" />     
-        <form onSubmit={this.handleSubmit}>
+        <form className="form" onSubmit={this.handleSubmit}>
             <h3>Input zip code:</h3>
             <input className="weather-input" value={this.state.value} onChange={this.handleChange} type="text"></input>
-            <button className="submit-btn" type="submit">Submit</button>
+            <button className="submit-btn btn" type="submit">Submit</button>
         </form>
         
         <div className="temp-render">
-            <div>{this.state.city}</div>
-            <div>{this.state.temperature}</div>
+            <div><h3>{this.state.city}</h3></div>
+            <div><h3>{this.state.temperature}</h3></div>
         </div>
         
         </div>
