@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import json from './Guides.json';
 import tropical from './images/tropical.jpg'
@@ -14,26 +14,28 @@ import { Card,
   Link,
 } from 'react-router-dom';  
 
-function Guides(){
-    return ( 
-      <Router>    
-      <React.Fragment>
-      {json.guides.map((j, i) => {
-        return <div key={i}>
-        <Card className="card">
-          <CardImg className="card-img" src={tropical} alt="Card image cap" />
-          <CardBody>
-            <CardTitle>{j.title}</CardTitle>
-            <CardTitle>{j.type}</CardTitle>
-            <CardText>{j.price}</CardText>
-            <Button><Link to={`/${i}`}>View Guides</Link></Button>
-          </CardBody>
-        </Card>
-      </div>     
-      })}
-      </React.Fragment>
-      </Router>
-    ) 
-}
+class Guides extends Component {
 
+  render(){
+        return ( 
+          <Router>
+            <React.Fragment>
+            {json.guides.map((j, i) => {
+              return <div key={i}>
+              <Card className="card">
+                <CardImg className="card-img" src={tropical} alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>{j.title}</CardTitle>
+                  <CardTitle>{j.type}</CardTitle>
+                  <CardText>{j.price}</CardText>
+                  <Button><Link to={`/guides/${i}`}>View Guides</Link></Button>
+                </CardBody>
+              </Card>
+            </div>
+            })}
+            </React.Fragment>
+          </Router>
+        ) 
+    }
+}  
 export default Guides
