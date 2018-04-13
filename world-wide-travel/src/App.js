@@ -5,11 +5,7 @@ import Background from './Background';
 import Footer from './Footer';
 import Guides from './Guides';
 import Weather from './Weather';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 class App extends Component {
   render() {
