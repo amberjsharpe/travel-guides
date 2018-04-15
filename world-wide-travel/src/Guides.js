@@ -1,40 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
 import json from './Guides.json';
-import tropical from './images/tropical.jpg'
-import { Card, 
-  CardText, 
-  CardBody,
-  CardTitle, 
-  CardImg, 
-  Button } from 'reactstrap';
   import {
-  BrowserRouter as Router,
   Route,
-  Link,
 } from 'react-router-dom';  
+import GuideCard from './GuideCard';
 
 class Guides extends Component {
-
   render(){
         return ( 
-          <Router>
-            <React.Fragment>
-            {json.guides.map((j, i) => {
-              return <div key={i}>
-              <Card className="card">
-                <CardImg className="card-img" src={tropical} alt="Card image cap" />
-                <CardBody>
-                  <CardTitle>{j.title}</CardTitle>
-                  <CardTitle>{j.type}</CardTitle>
-                  <CardText>{j.price}</CardText>
-                  <Button><Link to={`/guides/${i}`}>View Guides</Link></Button>
-                </CardBody>
-              </Card>
+          <div className="guide-display">
+            {json.guides.map((j, sub) => {
+              return <div key={sub}>
+              <GuideCard guide={j} index={sub}/>
+              <Route exact path={`${this.props.match.path}/:sub`} render={(props) => (
+                <GuideCard guide={j} index={sub} />
+              )}/>
             </div>
             })}
-            </React.Fragment>
-          </Router>
+            </div>
         ) 
     }
 }  

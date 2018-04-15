@@ -5,7 +5,7 @@ import Background from './Background';
 import Footer from './Footer';
 import Guides from './Guides';
 import Weather from './Weather';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -25,9 +25,7 @@ class App extends Component {
               <Weather />
             </div>
             <h2>Bork! Bork! Need a guide?</h2>
-            <div className="guide-display">
-              <Guides />
-            </div>
+            <Route exact path="/guides" component={Guides}/>
           </div>
         </div>
         </Router>
