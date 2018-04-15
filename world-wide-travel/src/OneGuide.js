@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import tropical from './images/tropical.jpg'
-import OneGuide from './OneGuide.js';
-
 import './App.css';
+import json from './Guides.json';
 import {
     Card,
     CardText,
@@ -14,25 +13,22 @@ import {
 import { 
     Link, 
     Route } from 'react-router-dom';
-
-class GuideCard extends Component {
+class OneGuide extends Component {
     render() {
-        console.log(this.props);
-        const guide = this.props.guide;
+        const guide = json.guides[this.props.match.params.guideId];
 
-        if (!this.props) {
-            return <div></div>;
-        }
-
-        return <Card className="card">
+    return <div> 
+        <Card className="card">
             <CardImg className="card-img" src={tropical} alt="Card image cap" />
             <CardBody>
                 <CardTitle>{guide.title}</CardTitle>
                 <CardTitle>{guide.type}</CardTitle>
                 <CardText>{guide.price}</CardText>
-                <Button><Link to={`/guides/${this.props.index}`}>View Guides</Link></Button>
+                <Button><Link to={`/guides`}>Back to Home</Link></Button>
             </CardBody>
         </Card>
+        <Route exact path={`${this.props.match}/:guideId`} component={OneGuide} />
+    </div>
     }
 }
-export default GuideCard
+export default OneGuide
